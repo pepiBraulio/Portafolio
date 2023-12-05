@@ -18,6 +18,7 @@ export class AppComponent {
   iconPinterest: SafeResourceUrl;
   iconInstagram: SafeResourceUrl;
   logoWhite: SafeResourceUrl;
+  sombra: SafeResourceUrl;
 
   constructor(private sanitizer: DomSanitizer) {
     // Ruta relativa a la imagen en la carpeta assets
@@ -30,6 +31,7 @@ export class AppComponent {
     const iconPinterest1 = 'assets/icon-pinterest.svg';
     const iconInstagram1 = 'assets/icon-instagram.svg';
     const logoWhite1 = 'assets/logo.svg';
+    const sombra1 = 'assets/bg-tablet-pattern.svg';
 
     // Sanitizar la URL de la imagen para evitar problemas de seguridad
     this.logoPrincipal = this.sanitizer.bypassSecurityTrustResourceUrl(rutaImagen);
@@ -41,5 +43,6 @@ export class AppComponent {
     this.iconPinterest = this.sanitizer.bypassSecurityTrustResourceUrl(iconPinterest1);
     this.iconInstagram = this.sanitizer.bypassSecurityTrustResourceUrl(iconInstagram1);
     this.logoWhite = this.sanitizer.bypassSecurityTrustResourceUrl(logoWhite1);
+    this.sombra = this.sanitizer.bypassSecurityTrustResourceUrl(sombra1);
   }
 }

@@ -20,4 +20,9 @@
         "copy";
     }
 
+    .footer-area-md{
+        grid-template-areas: 
+        "logo           navigation  form"
+        "social-media   navigation  copy";
+    }
 }
